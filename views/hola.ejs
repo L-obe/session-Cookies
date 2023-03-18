@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Session-Cookies</title>
+  <link rel='stylesheet' href='/css/style.css'>
+</head>
+
+<body>
+  <main>
+
+    <% if (locals.user) { %>
+      <style>
+        body {
+          background-color: <%=locals.user.color%>;
+        }
+      </style>
+      <div>
+        <h1>
+          <%= locals.user.name %>, gracias por visitarnos!
+        </h1>
+        <form action="" method="post" class="olvidar">
+          <button class="click" type="submit">olvidar el color</button>
+        </form>
+      </div>
+      <br>
+      <a class="click" href="/">Volver</a>
+      <% } %>
+  </main>
+</body>
+
+</html>
